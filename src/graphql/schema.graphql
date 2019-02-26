@@ -1,0 +1,24 @@
+type Post @model {
+  id: ID!
+  postOwnerUsername: String!
+  postOwnerId: String!
+  postContent: String!
+  likes: [Like] @connection(name: "PostLikes")
+}
+
+type Like @model {
+  id: ID!
+  numberLikes: Int!
+  likeOwnerUsername: String!
+  likeOwnerId: String!
+  post: Post @connection(name: "PostLikes")
+}
+
+type Winner @model {
+  id: ID!
+  postOwnerUsername: String!
+  postOwnerId: String!
+  reputation: Int!
+  postContent: String!
+  maxlikes: String!
+}

@@ -1,0 +1,9 @@
+node_modules/**/*
+.expo/*
+amplify/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+.amplifyrc
