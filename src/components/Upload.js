@@ -32,10 +32,6 @@ export default class Upload extends React.Component {
     modalVisible: false,
   }
 
-  onChangeText = (key, val) => {
-    this.setState({ [key]: val })
-  }
-
   componentDidMount = async () => {
     await Auth.currentAuthenticatedUser()
     .then(user => {
@@ -121,8 +117,13 @@ export default class Upload extends React.Component {
   showModal = () => {
     this.setState({ modalVisible: true })
   }
+
   hideModal = () => {
     this.setState({ modalVisible: false })
+  }
+
+  onChangeText = (key, val) => {
+    this.setState({ [key]: val })
   }
 
   render() {		

@@ -3,6 +3,7 @@ import {
   StyleSheet, 
   View,
   ScrollView,
+  Dimensions,
   TouchableOpacity} from 'react-native'
 
 import { Card, Text, Icon } from 'native-base'
@@ -83,10 +84,10 @@ export default class HallOfFameScreen extends React.Component {
         <View style={styles.headerStyle}>
           <View style={{ flexDirection: 'row'}}>
             <TouchableOpacity onPress={this.componentDidMount}>
-            <Icon 
-              active 
-              name='trophy'
-              style={styles.iconStyle}
+              <Icon 
+                active 
+                name='trophy'
+                style={styles.iconStyle}
               />
             </TouchableOpacity>
           </View>          
@@ -140,6 +141,8 @@ export default class HallOfFameScreen extends React.Component {
   }
 }
 
+let { width } = Dimensions.get('window')
+
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -170,6 +173,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
+    width: width,
   },
   headerStyle: {
     alignItems: 'center',

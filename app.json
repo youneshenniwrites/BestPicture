@@ -13,8 +13,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +22,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "uk.co.powerh.plush"
+    },
+    "android": {
+      "package": "uk.co.powerh.plush"
+    },
+    "description": "Plush is a social gaming app for best posts",
+    "githubUrl": "https://github.com/jtaylor1989/Zopher"
   }
 }
