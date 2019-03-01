@@ -26,7 +26,8 @@
       "bundleIdentifier": "uk.co.powerh.plush"
     },
     "android": {
-      "package": "uk.co.powerh.plush"
+      "package": "uk.co.powerh.plush",
+      "versionCode": 2
     },
     "description": "Plush is a social gaming app for best posts",
     "githubUrl": "https://github.com/jtaylor1989/Zopher"
