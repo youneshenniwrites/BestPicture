@@ -74,7 +74,7 @@ const configurations = {
 const options = {
   initialRouteName: 'Winners',
   tabBarPosition: 'bottom',
-  swipeEnabled: true,
+  swipeEnabled: false,
   animationEnabled: true,
   navigationOptions: {
     tabBarVisible: true // false

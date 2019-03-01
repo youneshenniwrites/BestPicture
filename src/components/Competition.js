@@ -47,16 +47,8 @@ export default class Competition extends React.Component {
     await this.listPosts()
   }
 
-  // Flush everting else: posts, likes, state.
+  // Navigate to the Hall of Fame screen
   flushPosts = async () => {
-    // Delete all posts and their likes from the database
-    await this.state.posts.map(this.deletePost)
-    await this.state.posts.map(
-      post => post.likes.items.map(
-        like => this.deleteLikesOfPost(like.id)
-      )
-    )
-    // Navigate to the Hall of Fame screen
     this.props.goToHOF()  
   }
 
