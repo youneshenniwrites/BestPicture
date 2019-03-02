@@ -33,30 +33,30 @@ Amplify.configure(config)
 
 // Configurations and options for the AppTabNavigator
 const configurations = {
+  Post: {
+    screen: UploadScreen,
+    navigationOptions: {
+      tabBarLabel: 'Post',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="ios-hourglass" style={{fontSize: 27, color: tintColor}} />
+      )
+    }
+  },
+  Vote: {
+    screen: CompetitionScreen,
+    navigationOptions: {
+      tabBarLabel: 'Vote',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="ios-heart" style={{fontSize: 27, color: tintColor}} />
+      )
+    }
+  },
   Winners: {
     screen: HallOfFameScreen,
     navigationOptions: {
       tabBarLabel: 'Winners',
       tabBarIcon: ({tintColor}) => (
         <Icon name="md-trophy" style={{fontSize: 27, color: tintColor}} />
-      )
-    }
-  },
-  Arena: {
-    screen: CompetitionScreen,
-    navigationOptions: {
-      tabBarLabel: 'Arena',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name="ios-heart" style={{fontSize: 27, color: tintColor}} />
-      )
-    }
-  },
-  Posts: {
-    screen: UploadScreen,
-    navigationOptions: {
-      tabBarLabel: 'Posts',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name="ios-hourglass" style={{fontSize: 27, color: tintColor}} />
       )
     }
   },
@@ -72,7 +72,7 @@ const configurations = {
 }
 
 const options = {
-  initialRouteName: 'Winners',
+  initialRouteName: 'Post',
   tabBarPosition: 'bottom',
   swipeEnabled: false,
   animationEnabled: true,
@@ -84,10 +84,10 @@ const options = {
     activeTintColor: '#fb7777',
     inactiveTintColor: '#a8abaf',
     style: {
-      backgroundColor: '#fff5',
+      backgroundColor: '#1111',
       paddingBottom: 10, // Important for iPhone X
       borderTopWidth: 0.3,
-      borderTopColor: '#a8abaf',
+      borderTopColor: '#000',
     },
     labelStyle: {
       fontSize: 9,
@@ -149,9 +149,9 @@ const AppStackNavigator = createStackNavigator({
 const AppDrawerNavigator = createDrawerNavigator(
   {
     Tabs: AppStackNavigator,
+    Post: UploadScreen,
+    Vote: CompetitionScreen,
     Winners: HallOfFameScreen,
-    Arena: CompetitionScreen,
-    Posts: UploadScreen,
     Profile: ProfileScreen,
   },
 )
