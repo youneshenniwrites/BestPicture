@@ -117,8 +117,7 @@ export default class HallOfFameScreen extends React.Component {
                   </Text>
                   <View style={styles.cardFooterStyle}>  
                     <View style={{flex:1, justifyContent: 'center', alignItems: 'flex-start'}}>
-                      <TouchableOpacity
-                        onPress={() => this.toggleLikePost(post)}>
+                      <TouchableOpacity>
                         <Icon
                           name='md-heart'
                           style={{ fontSize: 40, color: '#fb7777' }}
