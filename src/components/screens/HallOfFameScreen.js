@@ -80,7 +80,7 @@ export default class HallOfFameScreen extends React.Component {
   render() {
     let { reputations, trophies } = this.state
     return (
-      <View style={styles.container}>
+      <View style={{flex: 1}}>
         <View style={styles.headerStyle}>
           <View style={{ flexDirection: 'row'}}>
             <TouchableOpacity onPress={this.componentDidMount}>

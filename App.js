@@ -72,7 +72,7 @@ const configurations = {
 }
 
 const options = {
-  initialRouteName: 'Post',
+  initialRouteName: 'Winners',
   tabBarPosition: 'bottom',
   swipeEnabled: false,
   animationEnabled: true,
@@ -84,10 +84,10 @@ const options = {
     activeTintColor: '#fb7777',
     inactiveTintColor: '#a8abaf',
     style: {
-      backgroundColor: '#1111',
+      backgroundColor: '#fff',
       paddingBottom: 10, // Important for iPhone X
-      borderTopWidth: 0.3,
-      borderTopColor: '#000',
+      // borderTopWidth: 0.3,
+      // borderTopColor: '#000',
     },
     labelStyle: {
       fontSize: 9,
